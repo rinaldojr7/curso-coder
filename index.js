@@ -1,11 +1,18 @@
-const nome = prompt("informe seu nome")
-const sobrenome = prompt("informe seu sobrenome")
-const anoAtual= 2024
-const idade = prompt("informe sua idade")
+const numero = parseInt(prompt(`Digite o preço: `));
 
+const soma = (numero, icms) => {
+    return numero + icms;
+};
 
-const anoNascimento = anoAtual-parseFloat(idade)
+const calcularICMS = (preco) => {
+    return preco * 0.07;
+};
 
-console.log(`${nome} ${sobrenome}, e eu nasci em: ${anoNascimento}`)
+const somaICMS = (preco, icms) => {
+    return preco + icms;
+};
 
-alert(`${nome} ${sobrenome}, e eu nasci em: ${anoNascimento}`)
+const icms = calcularICMS(numero);
+const precoICMS = somaICMS(numero, icms);
+const resultado = precoICMS;
+alert(resultado);
